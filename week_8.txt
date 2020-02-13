@@ -1,0 +1,33 @@
+Git คืออะไร
+git คือ Version Control Systems
+หมายถึง เป็นอุปกรณ์ที่ช่วยในการทำงานเป็นกลุ่มจะทำให้การทำงานเป็นกลุ่มง่ายขึ้น
+
+โดย Terminal ของ git จะเป็น Linux ใช้คำสั้งเหมือน msys2
+git repository จะมีสองอันคือ local กับ remote(อยู่บนเน็ต)
+
+การใช้งาน
+1. ติดตั้ง git ก่อน (google git ไปเลยจ้า)
+2. สร้าง directory ที่จะเก็บงาน
+3. initialize git repository ประมาณว่าสร้าง folder เก็บงานใน git
+    โดยใข้คำสัง git init 
+4. สร้างไฟล์งานที่จะเก็บใน git
+5. ส่งไฟล์เข้า git โดยมีคำสังที่เกี่ยวข้องดังนี้
+    5.1 git status เป็นการ check ว่ามีไฟล์อะไรบ้างที่จะ commit
+    5.2 git add <ชื่อไฟล์> หรือ git add . คือการ add ไฟล์ทั้งหมดไปในการ commit นั้น
+    5.3 git commit -m <comment> commit คือการส่งขึ้น repository -m คือข้อความกำกับแล้วแต่จะเขียน
+6. ดู Checkpoint ด้วยคำสัง git log --all --decorate --oneline --graph (git log adog)
+    จะแสดงว่า checkpoint มีเลขกำกับคืออะไร และ เราอยู่ checkpoint ไหน
+ึ7. เราสามารถย้อนกลับไป checkpoint อื่นได้ด้วยคำสั่ง git checkout
+    7.1 git checkout <commit-id> กลับทั้งหมด
+    7.2 git checkout <commit-id>  <ชื่อไฟล์> กลับบางไฟล์
+
+ต่อไปคือการเอา local repository เชื่อมกับ remote repository บน github ต้องมี id github อยู่แล้ว
+1. ใช้คำสั่ง git remote add <ชื่อ remote เช่น origin> <git url>
+2. ใช้คำสั่ง git push -u <remote name> <branch name>
+3. ถ้า push ครั้งแรกต้องใส่ id และ password
+
+อยากจะนำ git repository ที่เก็บไว้ใน server มาทำงานต่อให้ใช้คำสั่ง 
+git clone <git-url>
+
+อ้างอิง https://docs.google.com/document/d/1wVy8OZlYp7a1IvMegnsx5pFjAmqMK8o-pUeEfdX3hkU/edit
+
