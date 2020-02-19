@@ -1,0 +1,16 @@
+git branch คืออะไร
+คือ สายการพัฒนาที่แยกกันออกไป
+การสาร branch
+1.ใช้คำสั่ง git branch <branch-name>
+        โดย <branch-name> จะหมายถึงชื่อ branch ที่ตั้ง
+    1.2 หรือจะสร้าง branch แล้วย้ายไป branch นั้นเลย โดยใข้คำสั่ง
+        git checkout -b <branch-name>
+
+2.การ Merge Branch ใช้คำสั่ง git merge <branch-name>
+    โดยต้อง เปลี่ยนไปที่ Branch ปลายทางก่อน
+    ถ้ามี conflict แล้วจะมีให้เปลี่ยน code 
+
+3.การ Pull ใช้คำสั่ง git pull <remote> <branch>
+    ถ้ามี conflict แล้วจะมีให้เปลี่ยน code หลังจาก pull
+
+note ให้ลองสังเกต git log adog ดูจะมีความเปลียนแปลงหลังจากสร้าง branch
